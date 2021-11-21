@@ -19,7 +19,10 @@ window.onload = start;
 
 function start()
 {
-	document.getElementById("alphabet").innerHTML = "LOL";
+	var div_content = "";
+	for(i=0 ; i<35 ; i++)
+	
+	document.getElementById("alphabet").innerHTML = div_content;
 	
 	
 	write_slogan();
