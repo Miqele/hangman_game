@@ -6,6 +6,8 @@ var slogan1 = "";
 var false_hit = 0;
 var yes = new Audio("yes.wav");
 var no = new Audio("no.wav");
+var win = new Audio("win.wav");
+var lose = new Audio("lose.wav");
 
 for(i=0; i<length; i++)
 {
@@ -116,12 +118,14 @@ function check(nr)
 	}
 	if (slogan == slogan1)
 	{
+		win.play();
 		document.getElementById("alphabet").innerHTML = " Gratulacje ! </br></br> Prawidłowe hasło to: </br>"+slogan+'</br></br> <span class="reset" onclick="location.reload()">JESCZE RAZ ?</span>';
 	}
 	//lose
 	if(false_hit >= 9)
 	{
-			document.getElementById("alphabet").innerHTML = " NIestety &#9785; ! </br></br> Prawidłowe hasło to: </br>"+slogan+'</br></br> <span class="reset2" onclick="location.reload()">JESCZE RAZ ?</span>';
+		lose.play();
+		document.getElementById("alphabet").innerHTML = " NIestety &#9785; ! </br></br> Prawidłowe hasło to: </br>"+slogan+'</br></br> <span class="reset2" onclick="location.reload()">JESCZE RAZ ?</span>';
 	}
 	
 }
